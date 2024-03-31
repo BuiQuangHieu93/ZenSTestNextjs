@@ -58,26 +58,26 @@ const JokeDisplay = () => {
       </div>
       <div className="w-full justify-center flex">
         {jokes && jokeIndex < jokes.length ? (
-          <div className="flex flex-row justify-between w-[60%]">
+          <div className="flex flex-row justify-between w-[80%]">
             <button
-              className="bg-[#2c7edb] w-[320px] h-[60px] text-white"
+              className="bg-[#2c7edb] w-[220px] h-[60px] text-white"
               onClick={() => handleLike(jokes[jokeIndex]?._id)}
             >
               This is Funny!
             </button>
             <button
-              className="bg-[#29b363] w-[320px] h-[60px] text-white"
+              className="bg-[#29b363] w-[220px] h-[60px] text-white"
               onClick={() => handleDislike(jokes[jokeIndex]?._id)}
             >
               This is not funny.
             </button>
           </div>
         ) : (
-          <div className="flex flex-row justify-between w-[60%]">
-            <button className="bg-[#2c7edb] w-[320px] h-[60px] text-white">
+          <div className="flex flex-row justify-between w-[80%]">
+            <button className="bg-[#2c7edb] w-[220px] h-[60px] text-white">
               This is Funny!
             </button>
-            <button className="bg-[#29b363] w-[320px] h-[60px] text-white">
+            <button className="bg-[#29b363] w-[220px] h-[60px] text-white">
               This is not funny.
             </button>
           </div>
