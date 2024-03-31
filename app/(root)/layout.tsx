@@ -16,7 +16,7 @@ export default function layout({
         {children}
         <div className="h-[1px] w-full bg-[#d5d5d5]"></div>
         <Footer />
-        <div className="absolute w-full bottom-0">
+        <div className="fixed w-full bottom-0">
           <CookieConsentBanner />
         </div>
       </body>
