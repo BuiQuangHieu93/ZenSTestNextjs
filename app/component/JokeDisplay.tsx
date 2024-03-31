@@ -6,7 +6,7 @@ import { VoteJoke } from "@/lib/actions/vote.action";
 import { getCookie } from "cookies-next";
 
 const JokeDisplay = () => {
-  const [jokes, setJokes] = useState<{ content: string }[]>([]);
+  const [jokes, setJokes] = useState<{ _id: string; content: string }[]>([]);
   const [jokeIndex, setJokeIndex] = useState(0);
 
   useEffect(() => {
@@ -61,13 +61,13 @@ const JokeDisplay = () => {
           <div className="flex flex-row justify-between w-[60%]">
             <button
               className="bg-[#2c7edb] w-[320px] h-[60px] text-white"
-              onClick={() => handleLike(jokes[jokeIndex]._id)}
+              onClick={() => handleLike(jokes[jokeIndex]?._id)}
             >
               This is Funny!
             </button>
             <button
               className="bg-[#29b363] w-[320px] h-[60px] text-white"
-              onClick={() => handleDislike(jokes[jokeIndex]._id)}
+              onClick={() => handleDislike(jokes[jokeIndex]?._id)}
             >
               This is not funny.
             </button>
